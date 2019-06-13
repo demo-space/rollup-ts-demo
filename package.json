@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "watch": "rollup -c rollup.dev.config.js -w",
+    "build": "rollup -c",
+    "start": "browser-sync start --server 'example' --files 'example/**'",
+    "dev": "npm run watch & npm run start",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@types/js-cookie": "^2.2.2",
+    "browser-sync": "^2.26.7",
+    "eslint": "^5.16.0",
+    "rollup": "^1.15.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.1",
+    "rollup-plugin-typescript2": "^0.21.1",
+    "rollup-plugin-uglify": "^6.0.2",
+    "typescript": "^3.5.1"
+  },
+  "dependencies": {
+    "js-cookie": "^2.2.0"
+  }
+}

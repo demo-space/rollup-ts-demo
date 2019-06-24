@@ -1,7 +1,8 @@
 import resolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs';
-import { uglify } from "rollup-plugin-uglify"
-import typescript from 'rollup-plugin-typescript2';
+import commonjs from 'rollup-plugin-commonjs'
+import typescript from 'rollup-plugin-typescript2'
+import serve from 'rollup-plugin-serve'
+import livereload from 'rollup-plugin-livereload'
 
 export default {
   input: 'src/main.ts',
@@ -16,6 +17,10 @@ export default {
       include: 'node_modules/**', // Default: undefined
     }),
     typescript(),
-    uglify()
+    serve({
+      contentBase: 'example',
+      open: true
+    }),
+    livereload(),
   ]
 }

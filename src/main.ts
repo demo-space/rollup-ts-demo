@@ -1,8 +1,7 @@
 import Cookies from "js-cookie"
 
 function sum(a: number, b: number): number {
-  const c: number = a + b
-  alert(233)
+  const c: number = a +b
   return c
 }
 
